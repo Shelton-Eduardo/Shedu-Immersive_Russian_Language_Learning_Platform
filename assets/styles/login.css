@@ -91,7 +91,9 @@ main label {
 }
 
 main input[type="text"],
+main input[type="email"],
 main input[type="number"],
+main input[type="password"],
 main select {
     width: 100%;
     padding: 12px 15px;
