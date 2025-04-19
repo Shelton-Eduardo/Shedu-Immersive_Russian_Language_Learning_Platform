@@ -1,0 +1,295 @@
+:root {
+    --red: #C62828; /* Traditional red */
+    --blue: #1565C0; /* Deep blue */
+    --blues: #467fdc;
+    --blex: #4285f4;
+    --sunyellow: #FBC02D; /* Sun yellow */
+    --yellow: #FFD700;
+    --bg: #F5F5F5;
+  }
+
+  :root {
+    --primary: #D32F2F; /* Deep red */
+    --primary-light: #FF6659;
+    --accent: #FFC107; /* Golden yellow */
+    --accent-light: #FFD54F;
+    --text: #212121;
+    --text-light: #757575;
+    --bg: #FFF9E6; /* Creamy yellow background */
+    --footer: #1A1A1A;
+  }
+
+main {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main.login{
+    flex: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+main.login{
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(186, 186, 186, 0.15);
+    backdrop-filter: blur(0.5pc);
+    border: 0px;
+}
+
+main .signin-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    max-height: 650px;
+    padding: 40px;
+    margin: 20px 0;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #4285f4 #f1f1f1;
+}
+
+main .welcome-message {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+main .welcome-message h1 {
+    color: #4285f4;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+main .welcome-message p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+main .form-group {
+    margin-bottom: 20px;
+}
+
+main label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+main input[type="text"],
+main input[type="number"],
+main select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s;
+}
+
+main input[type="text"]:focus,
+main input[type="number"]:focus,
+main select:focus {
+    border-color: #4285f4;
+    outline: none;
+}
+
+main .flex-group {
+    display: flex;
+    gap: 15px;
+}
+
+main .flex-group .form-group {
+    flex: 1;
+}
+
+main .language-description {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+main .terms-group {
+    display: flex;
+    align-items: flex-start;
+    margin: 25px 0;
+}
+
+.terms-group input {
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+main .terms-group label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: normal;
+}
+
+main .terms-group a {
+    color: #4285f4;
+    text-decoration: none;
+}
+
+main .submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+main .submit-btn:hover {
+    background-color: #3367d6;
+}
+
+main optgroup {
+    color: #666;
+    font-style: normal;
+    font-size: 0.9em;
+}
+
+main optgroup option {
+    color: #888;
+    padding-left: 15px;
+}
+
+/* Custom scrollbar for WebKit browsers */
+main .signin-container {
+    scrollbar-width: none;
+}
+
+main .signin-container::-webkit-scrollbar {
+    display: none;
+}
+
+main .signin-container:hover::-webkit-scrollbar {
+    display: block;
+}
+
+-- 
+body {
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body:hover::-webkit-scrollbar {
+    display: none;
+}
+
+/* START TEST*/
+
+/* Progress indicator */
+.onboarding-progress {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+.progress-step {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #999;
+}
+.progress-step.active {
+    background: var(--blex);
+    color: white;
+}
+.progress-line {
+    flex: 1;
+    height: 2px;
+    background: #eee;
+    margin: 0 5px;
+}
+.progress-text {
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    font-size: 0.8rem;
+    color: var(--text-light);
+}
+
+/* Language roadmap */
+.language-roadmap {
+    margin-top: 15px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+.roadmap-notice {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+.roadmap-link {
+    color: var(--blex);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 5px;
+}
+.roadmap-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.tag {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+.tag.planned {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+.tag.voting {
+    background: #fff8e1;
+    color: #ff8f00;
+}
+.tag.development {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+/* Terms links */
+.terms-link {
+    color: var(--blex);
+    text-decoration: underline;
+}
+
+/* Field hints */
+.field-hint {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+/* END TEST */
