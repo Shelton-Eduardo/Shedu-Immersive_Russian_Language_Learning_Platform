@@ -3,7 +3,7 @@ class LoginPopup {
       this.body = document.getElementById('body')
       this.loginPopup = document.querySelector('main.login');
       this.loginForm = document.querySelector('.signin-container');
-      this.loginButtons = document.querySelectorAll('.auth-buttons a:first-child');
+      this.login =  Array.prototype.slice.call(document.querySelectorAll('.auth-buttons a:first-child')).concat(Array.prototype.slice.call(document.querySelectorAll('.join')));
       
       if (this.loginPopup) {
         this.init();
@@ -12,7 +12,7 @@ class LoginPopup {
   
     init() {
       this.loginPopup.style.display = 'none';
-      this.loginButtons.forEach(btn => {
+      this.login.forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
           this.openPopup();
@@ -48,7 +48,12 @@ class LoginPopup {
   }
 
 
-  window.addEventListener('load', () => new LoginPopup());
+window.addEventListener('load', () => new LoginPopup());
+
+
+
+
+
   // TEST
 
 // Show/hide other language field
