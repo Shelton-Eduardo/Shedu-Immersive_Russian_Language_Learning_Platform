@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Russian | Shedu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/assets/styles/base.css">
+    <link rel="stylesheet" href="/assets/styles/login.css">
+    <script src="/assets/scripts/base.js"></script>
+</head>
+<body id="body">
+    <header>
+        <img src="shedu-logo.png" alt="Shedu Logo - Learn Russian with Friends" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/">Features</a></li>
+                <li><a href="/">How it Works</a></li>
+                <li><a href="/">Talk to President</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#">Login</a>
+            <a href="#" class="down">Download App</a>
+        </div>
+    </header>
+    <div id="reklama">
+        <h1>
+            Learn Russian <br>
+        </h1>
+        <h2>Thousands of lessons. KHITU stipendia</h2>
+        <a href="/" onclick="LoginPopup()">→ Join President</a>
+    </div>
+    <div class="hero">
+        <div id="content">
+            <article class="content-sec">
+                <h1>Make<br><u>New Friends</u></h1>
+                <p>Connect with native Russian speakers and learners worldwide! Practice conversational skills in real-time, exchange cultural insights, and build meaningful connections while mastering the language together.</p>
+                <a href="/" class="btn join">Join now</a>
+            </article>
+            
+            <article class="content-sec">
+                <h1>Speak Russian<br><u>Without Fear</u></h1>
+                <p>Struggling with pronunciation or grammar? Our AI-powered feedback system gently corrects mistakes in real-time, helping you build confidence. Join a supportive community where mistakes are part of the journey!</p>
+                <a href="/" class="btn join">Start Practicing</a>
+            </article>
+            
+            <article class="content-sec">
+                <h1>Master Russian<br><u>Faster</u></h1>
+                <p>Tired of forgetting vocabulary? Our spaced repetition system and personalized quizzes adapt to your progress, so you spend time on what matters most. Learn 2x faster than traditional methods!</p>
+                <a href="/" class="btn join">Try Free Lessons</a>
+            </article>
+            
+            <article class="content-sec">
+                <h1>Discover<br><u>Real Russian</u></h1>
+                <p>Language isn't just words—it's culture! Explore slang, idioms, and traditions through curated videos, music, and live events with native speakers. Speak like a local, not a textbook!</p>
+                <a href="/" class="btn join">Explore Culture</a>
+            </article>
+            
+            <article class="content-sec">
+                <h1>Practice<br><u>Anywhere, Anytime</u></h1>
+                <p>Busy schedule? No problem! Bite-sized lessons, offline mode, and 24/7 chat partners fit into your routine. Waiting for coffee? Turn 5 minutes into progress!</p>
+                <a href="/" class="btn down">Download the App</a>
+            </article>
+            
+            <article class="content-sec">
+                <h1>Level Up<br><u>Your Russian</u></h1>
+                <p>Earn streaks, badges, and rewards as you progress! Compete with friends or unlock new 'missions'—because learning should feel like a game, not a chore.</p>
+                <a href="/" class="btn join">Play Now</a>
+            </article>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <div class="dev-notice">
+                <h3>Development Notice!</h3>
+                <p>Shedu is currently under active development. Some features shown may be prototypes, and you might encounter occasional errors or incomplete functionality. We appreciate your patience and feedback as we build the best Russian learning experience!</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="/about">About President</a>
+                <a href="/feedback">Send Feedback</a>
+                <a href="/roadmap">Development Roadmap</a>
+                <a href="/contact">Contact</a>
+            </div>
+            <p class="copyright">© 2025 Shedu Russian Learning App. All rights reserved to your President.</p>
+        </div>
+    </footer>
+    <!-- Login Overlay -->
+    <main class="login">
+        <div class="signin-container">
+            <div class="welcome-message">
+                <h1>Welcome to the World of Digital Learning</h1>
+                <p>Let's personalize your Russian learning journey</p>
+            </div>
+            
+            <form action="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+        
+                <div class="form-group">
+                    <label for="password">Create Password</label>
+                    <input type="password" id="password" name="password" required placeholder="••••••••••••••••••••••••"*>
+                    <p class="field-hint">Minimum 8 characters</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Ivanov Ivan Ivanovich" required>
+                    <p class="field-hint">Last → First → Patronymic/Middle</p>
+                </div>
+                
+                <div class="flex-group">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="duck">Duck</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="5" max="99" required>
+                    </div>
+                </div>
+                
+                <!-- Enhanced language selection -->
+                <div class="form-group">
+                    <label for="native-language">Native Language</label>
+                    <select id="native-language" name="native-language" required>
+                        <option value="" disabled selected>Select your language</option>
+                        <option value="english">English</option>
+                        <option value="portuguese">Portuguese</option>
+                        <option value="other">Other (Specify below)</option>
+                    </select>
+                    <div id="other-language-container" style="display:none; margin-top:10px;">
+                        <input type="text" id="other-language" name="other-language" placeholder="Please specify your language">
+                    </div>
+                    
+                    <!-- Improved roadmap section -->
+                    <div class="language-roadmap">
+                        <p class="language-description">
+                            This helps us tailor lessons to your linguistic background
+                        </p>
+                        <div class="roadmap-notice">
+                            <strong>Help shape Shedu:</strong> We're adding more languages soon!
+                            <a href="#language-vote" class="roadmap-link">
+                                Vote for the next language we should support →
+                            </a>
+                        </div>
+                        <div class="roadmap-tags">
+                            <span class="tag planned">Chinese</span>
+                            <span class="tag voting">Arabic</span>
+                            <span class="tag development">French</span>
+                            <span class="tag planned">German</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Terms with improved readability -->
+                <div class="terms-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">
+                        I agree to the <a href="#" class="terms-link">Terms of Service</a> and 
+                        <a href="#" class="terms-link">Privacy Policy</a>, and understand my 
+                        data will be used to enhance my learning experience.
+                    </label>
+                </div>
+                <!-- Inside your signin-container div -->
+ 
+    <div class="social-login-options">
+        <div class="auth-divider">
+          <span class="divider-text">or sign in with</span>
+        </div>
+        
+        <div class="social-buttons">
+          <a href="/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+            alt="Google"
+            class="social-btn"
+            loading="lazy">
+          </a>
+
+          <a href="/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Yandex_Browser_icon.svg/640px-Yandex_Browser_icon.svg.png"
+            alt="Yandex"
+            class="social-btn"
+            loading="lazy">
+          </a>
+
+          <a href="/">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/VKsignature.png/640px-VKsignature.png"
+            alt="VK"
+            class="social-btn"
+            loading="lazy">
+          </a>
+        </div>
+      </div>
+                <button type="submit" action="post" class="submit-btn">Begin Learning Journey</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
