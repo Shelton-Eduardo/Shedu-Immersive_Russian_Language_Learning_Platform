@@ -32,6 +32,7 @@ main.login{
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
+    /* transition: backdrop-filter 5s ease-out;*/
 }
 
 main.login{
@@ -45,7 +46,7 @@ main.login{
     justify-content: center;
     align-items: center;
     background-color: rgba(186, 186, 186, 0.15);
-    backdrop-filter: blur(0.5pc);
+    /* backdrop-filter: blur(0.5pc); */
     border: 0px;
 }
 
@@ -103,6 +104,9 @@ main select {
     transition: border 0.3s;
 }
 
+
+main input[type="password"]:focus,
+main input[type="email"]:focus,
 main input[type="text"]:focus,
 main input[type="number"]:focus,
 main select:focus {
@@ -294,4 +298,108 @@ body:hover::-webkit-scrollbar {
     margin-top: 5px;
 }
 
+main.login {
+    backdrop-filter: blur(0.5pc);
+    transition: backdrop-filter 2s ease-out;
+}
+
+main.login:active {
+    backdrop-filter: blur(0.1pc);
+}
+
 /* END TEST */
+
+/* Social login container */
+.social-login-options {
+  margin: 2rem 0;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  margin: 0.1rem 0;
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+}
+
+.divider-text {
+  padding: 0 1rem;
+}
+
+/* Social buttons grid - 3 columns always */
+.social-buttons{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);;
+    gap: 0.8em;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    height: 40px;
+    overflow-y: hidden;
+}
+
+.social-btn {
+    display: flex;
+    flex-direction: column;
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-btn:hover{
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-btn{
+    padding: 0 0 0 0;
+  }
+
+  @media (max-width: 767px) {
+    main .welcome-message h1 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    
+    main .welcome-message p {
+        font-size: 0.9rem;
+    }
+
+    .social-btn{
+        width: 25px;
+        height: 25px;
+    }
+
+    .social-buttons{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+ }
+
+ @media (max-width: 405px){
+    main .welcome-message h1 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+    
+    main .welcome-message p {
+        font-size: 0.9rem;
+    }
+
+    .social-buttons{
+        margin-top: 10px;
+        margin-bottom: 0px;
+    }
+ }
