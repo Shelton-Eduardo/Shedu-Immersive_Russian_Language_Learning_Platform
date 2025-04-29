@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Shedu</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="/assets/styles/base.css">
+    <link rel="stylesheet" href="/assets/styles/dashboard.css">
+</head>
+<body>
+    <header>
+        <img src="shedu-logo.png" alt="Shedu Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="/dashboard" class="active">Dashboard</a></li>
+                <li><a href="/lessons">Lessons</a></li>
+                <li><a href="/practice">Practice</a></li>
+                <li><a href="/progress">Progress</a></li>
+                <li><a href="/community">Community</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="user-profile">
+                <img src="user-avatar.jpg" alt="User Avatar" class="user-avatar">
+                <h3 class="user-name">Алексей Иванов</h3>
+                <span class="user-level">A1 Level</span>
+            </div>
+
+            <div class="progress-container">
+                <h4>Course Progress</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 42%"></div>
+                </div>
+                <span>42% completed</span>
+            </div>
+
+            <div class="upcoming-lessons">
+                <h4>Today's Schedule</h4>
+                <ul class="lesson-list">
+                    <li class="lesson-item">
+                        <div class="lesson-icon">10:00</div>
+                        <div class="lesson-info">
+                            <h5 class="lesson-title">Grammar: Cases</h5>
+                            <p class="lesson-meta">Classroom 3B</p>
+                        </div>
+                    </li>
+                    <li class="lesson-item">
+                        <div class="lesson-icon">14:00</div>
+                        <div class="lesson-info">
+                            <h5 class="lesson-title">Conversation Practice</h5>
+                            <p class="lesson-meta">With Anna Petrovna</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="welcome-banner">
+                <h2>Доброе утро, Алексей!</h2>
+                <p>You have 2 lessons and 3 practice activities today</p>
+            </div>
+
+            <div class="card-grid">
+                <!-- Progress Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Your Progress</h3>
+                        <span>Week 8 of 24</span>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Grammar</span>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Vocabulary</span>
+                            <span>42%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 42%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-label">
+                            <span>Pronunciation</span>
+                            <span>38%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 38%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Current Lesson Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Current Lesson</h3>
+                        <span>Due Tomorrow</span>
+                    </div>
+                    <h4>Instrumental Case</h4>
+                    <p>Learn to express means and tools</p>
+                    <ul class="lesson-list">
+                        <li class="lesson-item lesson-complete">
+                            <div class="lesson-icon">✓</div>
+                            <div class="lesson-info">
+                                <h5 class="lesson-title">Introduction Video</h5>
+                                <p class="lesson-meta">Completed</p>
+                            </div>
+                        </li>
+                        <li class="lesson-item">
+                            <div class="lesson-icon">2</div>
+                            <div class="lesson-info">
+                                <h5 class="lesson-title">Practice Exercises</h5>
+                                <p class="lesson-meta">3/5 completed</p>
+                            </div>
+                        </li>
+                        <li class="lesson-item">
+                            <div class="lesson-icon">3</div>
+                            <div class="lesson-info">
+                                <h5 class="lesson-title">Quiz</h5>
+                                <p class="lesson-meta">Not started</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Recent Activity</h3>
+                    <a href="#">View All</a>
+                </div>
+                <ul class="lesson-list">
+                    <li class="lesson-item">
+                        <div class="lesson-icon">✓</div>
+                        <div class="lesson-info">
+                            <h5 class="lesson-title">Completed: Prepositional Case Quiz</h5>
+                            <p class="lesson-meta">Score: 85% • Yesterday</p>
+                        </div>
+                    </li>
+                    <li class="lesson-item">
+                        <div class="lesson-icon">✎</div>
+                        <div class="lesson-info">
+                            <h5 class="lesson-title">Feedback on your essay</h5>
+                            <p class="lesson-meta">From Instructor • 2 days ago</p>
+                        </div>
+                    </li>
+                    <li class="lesson-item">
+                        <div class="lesson-icon">★</div>
+                        <div class="lesson-info">
+                            <h5 class="lesson-title">Earned: Grammar Master Badge</h5>
+                            <p class="lesson-meta">3 days ago</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="dev-notice">
+                <h3>Development Notice!</h3>
+                <p>Shedu is currently under active development. Some features shown may be prototypes.</p>
+            </div>
+            <p class="copyright">© 2025 Shedu Russian Learning App</p>
+        </div>
+    </footer>
+</body>
+</html>
